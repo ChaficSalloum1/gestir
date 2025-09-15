@@ -1,0 +1,7 @@
+review:
+  focus: [security, performance, typescript, firebase, tests]
+  path_includes: ["**/*.ts", "**/*.tsx"]
+  path_excludes: ["functions/lib/**", "web/dist/**"]
+comments:
+  style: actionable
+  limit: 200
