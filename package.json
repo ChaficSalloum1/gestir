@@ -1,0 +1,43 @@
+{
+  "name": "gestir-v2",
+  "version": "1.0.0",
+  "description": "AI-Powered Fashion Assistant with Firebase and Google AI Studio",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:functions\" \"npm run dev:web\"",
+    "dev:functions": "cd functions && npm run serve",
+    "dev:web": "cd web && npm run dev",
+    "build": "cd functions && npm run build && cd ../web && npm run build",
+    "deploy": "firebase deploy",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:web": "cd web && npm run build && cd .. && firebase deploy --only hosting",
+    "emulators": "firebase emulators:start",
+    "emulators:ui": "firebase emulators:start --only ui",
+    "setup": "npm install && cd functions && npm install && cd ../web && npm install",
+    "clean": "rm -rf node_modules functions/node_modules web/node_modules functions/lib web/dist"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/gestir-v2.git"
+  },
+  "keywords": [
+    "fashion",
+    "ai",
+    "firebase",
+    "react",
+    "google-ai",
+    "outfit-suggestions",
+    "wardrobe"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
+
+
+
+
